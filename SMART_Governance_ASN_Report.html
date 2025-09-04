@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SMART GOVERNANCE × Manajemen ASN & Smart ASN — Enam Isu, Core Issue, Fishbone, Solusi</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #111827;
+    --accent: #22d3ee;
+    --accent2: #a78bfa;
+    --text: #e5e7eb;
+    --muted: #94a3b8;
+    --ok: #10b981;
+    --warn: #f59e0b;
+    --danger: #ef4444;
+    --pill: #1f2937;
+    --soft: rgba(255,255,255,.06);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin:0; padding:0; background: radial-gradient(1200px 600px at 5% 5%, rgba(34,211,238,.08), transparent 40%), linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+    color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Arial;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 18px 80px; }
+  header.hero {
+    background: radial-gradient(1200px 600px at 5% 5%, rgba(34,211,238,.20), transparent 45%),
+                radial-gradient(1200px 600px at 100% 0%, rgba(167,139,250,.22), transparent 50%);
+    border: 1px solid #1f2937; border-radius: 16px; padding: 28px 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+  }
+  .badge { display:inline-flex; gap:8px; align-items:center; background:#0b1220; color:var(--accent);
+    padding:6px 12px; border-radius:999px; border:1px solid #1f2937; font-weight:600; letter-spacing:.3px; }
+  .title { font-size: 28px; margin: 10px 0 6px; line-height:1.2; }
+  .subtitle { color: var(--muted); margin: 0 0 14px; }
+  .meta { display:flex; flex-wrap:wrap; gap:10px; color:var(--muted); font-size:14px; }
+  .pill { background: var(--pill); border:1px solid #1f2937; padding:6px 10px; border-radius:999px; }
+  nav.toc { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+  nav.toc a { text-decoration:none; color:var(--text); background:#0b1220; border:1px solid #1f2937;
+    padding:8px 12px; border-radius:10px; transition:.2s; }
+  nav.toc a:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-1px); }
+  section { margin-top: 28px; background: rgba(17,24,39,.65); border:1px solid #1f2937; border-radius:16px; padding:22px; }
+  section h2 { font-size:22px; margin:0 0 10px; }
+  section h3 { font-size:18px; margin:14px 0 6px; color: var(--accent2); }
+  p, li { line-height:1.55; }
+  .grid { display:grid; gap:16px; }
+  @media (min-width: 900px) { .grid.cols-2{grid-template-columns:1fr 1fr} .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+  .card { background:#0b1220; border:1px solid #1f2937; border-radius:14px; padding:14px; }
+  .issue { display:flex; gap:14px; align-items:flex-start; }
+  .icon { width:40px;height:40px;border-radius:10px;background:#0b1220;border:1px solid #1f2937;display:grid;place-items:center; }
+  .chip { display:inline-block; padding:3px 8px; border-radius:8px; background:var(--soft); border:1px solid #1f2937; font-size:12px; color:var(--muted); margin-right:6px; }
+  .legend { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .bar-wrap { background:#0b1220; border:1px solid #1f2937; border-radius:10px; overflow:hidden; height:12px; }
+  .bar { background: linear-gradient(90deg, var(--accent), var(--accent2)); height:100%; width: 50%; }
+  table { width:100%; border-collapse:collapse; }
+  th, td { border-bottom:1px solid #1f2937; padding:8px 6px; text-align:left; vertical-align:top; }
+  thead th { color: var(--muted); font-weight:600; }
+  .small { font-size:13px; color:var(--muted); }
+  .callout { background:#0b1220; border:1px solid #1f2937; border-left:4px solid var(--accent); border-radius:10px; padding:12px; }
+  .todo { list-style:none; padding-left:0; }
+  .todo li::before { content:"▢"; margin-right:8px; color:var(--muted); }
+  .todo li.done::before { content:"▣"; color:var(--ok); }
+  .placeholder { background:#fde68a; color:#000; padding:2px 6px; border-radius:6px; font-weight:600; }
+  .foot { color:var(--muted); font-size:12px; text-align:center; margin-top:24px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="hero">
+    <span class="badge">SMART GOVERNANCE ✦ Manajemen ASN ✦ Smart ASN</span>
+    <h1 class="title">Identifikasi Isu, Core Issue, Analisis Fishbone, dan Solusi Kreatif</h1>
+    <p class="subtitle">Format digital interaktif — siap diedit & dicetak</p>
+    <div class="meta">
+      <span class="pill">Instansi: <span class="placeholder">[NAMA INSTANSI]</span></span>
+      <span class="pill">Penyusun: <span class="placeholder">[NAMA ANDA]</span></span>
+      <span class="pill">Tanggal: 04 September 2025</span>
+    </div>
+    <nav class="toc">
+      <a href="#ringkasan">Ringkasan</a>
+      <a href="#enam-isu">Enam Isu</a>
+      <a href="#tapisan">Tapisan & Core Issue</a>
+      <a href="#fishbone">Fishbone</a>
+      <a href="#solusi">Gagasan Solusi</a>
+      <a href="#rencana">Rencana 100-360 Hari</a>
+    </nav>
+  </header>
+
+  <section id="ringkasan">
+    <h2>Ringkasan Eksekutif</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Tujuan</h3>
+        <p>Mewujudkan <strong>SMART GOVERNANCE</strong> lewat penguatan <em>Manajemen ASN</em> & <em>Smart ASN</em> dengan fokus aplikasi & data kepegawaian yang <strong>aman</strong>, <strong>stabil</strong>, dan <strong>andal</strong>.</p>
+      </div>
+      <div class="card">
+        <h3>Hasil Utama</h3>
+        <ul>
+          <li>6 isu kritikal bidang Pengadaan, Pemberhentian & Informasi Kepegawaian.</li>
+          <li>Core Issue dipilih dengan <em>weighted filtering</em>.</li>
+          <li>Analisis akar masalah (Fishbone) dan solusi kreatif siap diterapkan.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="enam-isu">
+    <h2>Enam Isu Prioritas (1 Bidang)</h2>
+
+    <div class="card">
+      <div class="issue">
+        <div class="icon">👥</div>
+        <div>
+          <h3>1) SDM ASN belum memenuhi kebutuhan organisasi</h3>
+          <span class="chip">Manajemen ASN: Perencanaan SDM</span>
+          <span class="chip">Dampak: Layanan publik melambat</span>
+          <h4>Kondisi Saat Ini</h4>
+          <ul>
+            <li>Kesenjangan kompetensi & kuantitas di beberapa unit; penempatan belum sepenuhnya sesuai keahlian.</li>
+          </ul>
+          <h4>Dampak & Pihak Terdampak</h4>
+          <p>Overwork/underutilized; ASN pelaksana, pimpinan, masyarakat.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="issue">
+        <div class="icon">🧾</div>
+        <div>
+          <h3>2) Kuota formasi pegawai belum terpenuhi</h3>
+          <span class="chip">Manajemen ASN: Pengadaan</span>
+          <h4>Kondisi Saat Ini</h4>
+          <ul><li>Formasi CPNS/PPPK tidak terisi penuh tiap tahun.</li></ul>
+          <h4>Dampak & Pihak Terdampak</h4>
+          <p>Jabatan strategis kosong; regenerasi terhambat; OPD & masyarakat terdampak.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="issue">
+        <div class="icon">🗂️</div>
+        <div>
+          <h3>3) Sarana & sistem informasi kepegawaian belum optimal</h3>
+          <span class="chip">Informasi Kepegawaian</span>
+          <h4>Kondisi Saat Ini</h4>
+          <ul>
+            <li>SIMPEG sering bermasalah; data tidak selalu mutakhir; belum ada dashboard analitik.</li>
+          </ul>
+          <h4>Dampak</h4>
+          <p>Keputusan (mutasi, promosi, pensiun) berisiko; perencanaan SDM tidak berbasis data real-time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="issue">
+        <div class="icon">🔒</div>
+        <div>
+          <h3>4) Aplikasi rawan diretas & sering error saat trafik tinggi</h3>
+          <span class="chip">Keamanan Aplikasi</span><span class="chip">Reliabilitas</span>
+          <h4>Kondisi Saat Ini</h4>
+          <ul>
+            <li>Infrastruktur terbatas; keamanan (MFA/WAF) belum merata; saat input massal aplikasi sering down.</li>
+          </ul>
+          <h4>Dampak</h4>
+          <p>Layanan terganggu; potensi kebocoran data ASN; turunnya kepercayaan.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="issue">
+        <div class="icon">📍</div>
+        <div>
+          <h3>5) Titik koordinat absensi belum akurat</h3>
+          <span class="chip">Disiplin ASN</span>
+          <h4>Kondisi Saat Ini</h4>
+          <ul><li>Banyak titik geofence tidak sesuai lokasi kantor; ASN hadir tapi gagal absen.</li></ul>
+          <h4>Dampak</h4>
+          <p>Penilaian disiplin tidak akurat; potensi ketidakadilan.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="issue">
+        <div class="icon">📊</div>
+        <div>
+          <h3>6) Monitoring & evaluasi aplikasi belum terpadu</h3>
+          <span class="chip">Observability</span>
+          <h4>Kondisi Saat Ini</h4>
+          <ul><li>Error/serangan baru diketahui dari laporan manual; belum ada monitoring real-time terpusat.</li></ul>
+          <h4>Dampak</h4>
+          <p>Downtime panjang; bug berulang; kepercayaan menurun.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tapisan">
+    <h2>Tapisan Berbobot & Penetapan Core Issue</h2>
+    <p>Kriteria: <strong>Dampak</strong> 40%, <strong>Urgensi</strong> 30%, <strong>Risiko</strong> 15%, <strong>Kemudahan</strong> 15%.</p>
+    <table>
+      <thead><tr><th>Isu</th><th>Dampak</th><th>Urgensi</th><th>Risiko</th><th>Kemudahan</th><th>Total</th></tr></thead>
+      <tbody>
+        <tr><td>1) SDM belum memenuhi kebutuhan</td><td>25</td><td>20</td><td>10</td><td>5</td><td>60</td></tr>
+        <tr><td>2) Kuota formasi belum terpenuhi</td><td>20</td><td>15</td><td>10</td><td>5</td><td>50</td></tr>
+        <tr><td>3) Sistem informasi belum optimal</td><td>30</td><td>25</td><td>12</td><td>8</td><td>75</td></tr>
+        <tr><td>4) Aplikasi rawan diretas & error</td><td>35</td><td>28</td><td>14</td><td>10</td><td><strong>87</strong></td></tr>
+        <tr><td>5) Koordinat absensi tidak akurat</td><td>28</td><td>20</td><td>12</td><td>8</td><td>68</td></tr>
+        <tr><td>6) Monitoring aplikasi belum terpadu</td><td>32</td><td>25</td><td>13</td><td>12</td><td>82</td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><strong>Core Issue:</strong> <em>Aplikasi rawan diretas & sering error saat trafik tinggi.</em></div>
+  </section>
+
+  <section id="fishbone">
+    <h2>Analisis Akar Masalah (Fishbone)</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>People</h3>
+        <ul>
+          <li>Kompetensi pengelola terbatas (keamanan, optimasi).</li>
+          <li>Belum ada tim <em>incident response</em>.</li>
+          <li>Ketergantungan vendor/penyedia.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Process</h3>
+        <ul>
+          <li>SOP pemeliharaan & patching belum baku.</li>
+          <li>MFA/audit log belum konsisten.</li>
+          <li>Tidak ada <em>stress test</em> sebelum puncak trafik.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Technology</h3>
+        <ul>
+          <li>Infrastruktur terbatas (tanpa autoscaling).</li>
+          <li>Belum ada WAF/IDS/IPS, hardening minimal.</li>
+          <li>DB belum optimal (indexing, caching).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Policy</h3>
+        <ul>
+          <li>Standar keamanan aplikasi belum ditetapkan.</li>
+          <li>Anggaran keamanan minim.</li>
+          <li>Keamanan & uptime belum jadi IKU.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Environment</h3>
+        <ul>
+          <li>Lonjakan pengguna massal (absensi/SKP).</li>
+          <li>Ancaman siber meningkat.</li>
+          <li>Digitalisasi layanan menambah beban.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="solusi">
+    <h2>Gagasan Solusi Kreatif</h2>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>People</h3>
+        <ul>
+          <li><strong>Digital Talent Sprint</strong> 8–12 minggu.</li>
+          <li>Bentuk tim mini <em>incident response</em>.</li>
+          <li>Forum berbagi kasus bulanan.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Process</h3>
+        <ul>
+          <li>SOP backup–patch–audit log.</li>
+          <li>Uji <em>load/stress</em> berkala.</li>
+          <li>Workflow insiden: laporan→eskalasi→recovery→evaluasi.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Technology</h3>
+        <ul>
+          <li>Migrasi ke VPS/cloud internal; hardening.</li>
+          <li>Aktifkan WAF/IDS, wajib MFA, TLS penuh.</li>
+          <li>Optimasi DB, caching, <em>autoscaling</em>; monitoring Grafana/Prometheus.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Policy</h3>
+        <ul>
+          <li>SK standar keamanan aplikasi ASN.</li>
+          <li>Anggaran 5–10% untuk keamanan.</li>
+          <li>Keamanan & uptime sebagai IKU bidang.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Environment</h3>
+        <ul>
+          <li>Penjadwalan bergelombang saat puncak.</li>
+          <li><em>Queue system</em> & anti-bot.</li>
+          <li>Kolaborasi & benchmarking regional.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="rencana">
+    <h2>Rencana 100–360 Hari & KPI</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>0–100 Hari (Quick Wins)</h3>
+        <ul>
+          <li>Migrasi server & aktifkan firewall/WAF.</li>
+          <li>Monitoring real-time; MFA untuk admin.</li>
+          <li>Uji beban aplikasi absensi & SIMPEG.</li>
+          <li>SK standar keamanan & SOP.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>3–6 Bulan (Build)</h3>
+        <ul>
+          <li>Autoscaling; optimasi DB & caching.</li>
+          <li>Dashboard mutu & uptime.</li>
+          <li>Latihan <em>incident response</em> triwulan.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>6–12 Bulan (Scale)</h3>
+        <ul>
+          <li>Event-driven alerting & anti-bot adaptif.</li>
+          <li>Audit keamanan berkala; sertifikasi internal.</li>
+          <li>Perluasan ke aplikasi layanan lain.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>KPI</h3>
+        <ul>
+          <li>Uptime puncak ≥ 99,5%.</li>
+          <li>Insiden mayor: 0.</li>
+          <li>Error rate turun ≥ 70%.</li>
+          <li>Akurasi absensi ≥ 95%.</li>
+          <li>Kepuasan pengguna ≥ 85%.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <p class="foot">© 04 September 2025 — Versi khusus sesuai permintaan. Edit area yang diperlukan untuk menyesuaikan dengan instansi.</p>
+</div>
+</body>
+</html>
