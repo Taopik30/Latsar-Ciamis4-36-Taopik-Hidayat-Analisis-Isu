@@ -50,17 +50,8 @@
   .issue { display:flex; gap:14px; align-items:flex-start; }
   .icon { width:40px;height:40px;border-radius:10px;background:#0b1220;border:1px solid #1f2937;display:grid;place-items:center; }
   .chip { display:inline-block; padding:3px 8px; border-radius:8px; background:var(--soft); border:1px solid #1f2937; font-size:12px; color:var(--muted); margin-right:6px; }
-  .legend { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
-  .bar-wrap { background:#0b1220; border:1px solid #1f2937; border-radius:10px; overflow:hidden; height:12px; }
-  .bar { background: linear-gradient(90deg, var(--accent), var(--accent2)); height:100%; width: 50%; }
-  table { width:100%; border-collapse:collapse; }
-  th, td { border-bottom:1px solid #1f2937; padding:8px 6px; text-align:left; vertical-align:top; }
-  thead th { color: var(--muted); font-weight:600; }
-  .small { font-size:13px; color:var(--muted); }
   .callout { background:#0b1220; border:1px solid #1f2937; border-left:4px solid var(--accent); border-radius:10px; padding:12px; }
-  .todo { list-style:none; padding-left:0; }
-  .todo li::before { content:"▢"; margin-right:8px; color:var(--muted); }
-  .todo li.done::before { content:"▣"; color:var(--ok); }
+  .small { font-size:13px; color:var(--muted); }
   .foot { color:var(--muted); font-size:12px; text-align:center; margin-top:24px; }
 </style>
 </head>
@@ -72,8 +63,8 @@
     <p class="subtitle">Format digital interaktif — siap diedit & dicetak</p>
     <div class="meta">
       <span class="pill">Instansi: <strong>Badan Kepegawaian dan Pengembangan Sumber Daya Manusia</strong></span>
-      <span class="pill">Penyusun: <strong>Taopik Hidayat</strong></span>
-      <span class="pill">Tanggal: 04 September 2025</span>
+      <span class="pill">Penyusun: <strong>Taopik Hidayat - Angkatan 4 - Kelompok 3</strong></span>
+      <span class="pill">Tanggal: 06 September 2025</span>
     </div>
     <nav class="toc">
       <a href="#ringkasan">Ringkasan</a>
@@ -81,7 +72,7 @@
       <a href="#tapisan">Tapisan & Core Issue</a>
       <a href="#fishbone">Fishbone</a>
       <a href="#solusi">Gagasan Solusi</a>
-      <a href="#rencana">Rencana 6 Minggu</a>
+      <a href="#kesimpulan">Kesimpulan</a>
     </nav>
   </header>
 
@@ -96,8 +87,8 @@
         <h3>Hasil Utama</h3>
         <ul>
           <li>6 isu kritikal bidang Pengadaan, Pemberhentian & Informasi Kepegawaian.</li>
-          <li>Core Issue dipilih dengan <em>weighted filtering</em>.</li>
-          <li>Analisis akar masalah (Fishbone) dan solusi kreatif siap diterapkan.</li>
+          <li>Core Issue ditetapkan melalui <em>weighted filtering</em>.</li>
+          <li>Analisis akar masalah (Fishbone) dan solusi kreatif yang siap diimplementasikan.</li>
         </ul>
       </div>
     </div>
@@ -114,9 +105,7 @@
           <span class="chip">Manajemen ASN: Perencanaan SDM</span>
           <span class="chip">Dampak: Layanan publik melambat</span>
           <h4>Kondisi Saat Ini</h4>
-          <ul>
-            <li>Kesenjangan kompetensi & kuantitas di beberapa unit; penempatan belum sepenuhnya sesuai keahlian.</li>
-          </ul>
+          <ul><li>Kesenjangan kompetensi & kuantitas; penempatan belum sepenuhnya sesuai keahlian.</li></ul>
           <h4>Dampak & Pihak Terdampak</h4>
           <p>Overwork/underutilized; ASN pelaksana, pimpinan, masyarakat.</p>
         </div>
@@ -144,9 +133,7 @@
           <h3>3) Sarana & sistem informasi kepegawaian belum optimal</h3>
           <span class="chip">Informasi Kepegawaian</span>
           <h4>Kondisi Saat Ini</h4>
-          <ul>
-            <li>SIMPEG sering bermasalah; data tidak selalu mutakhir; belum ada dashboard analitik.</li>
-          </ul>
+          <ul><li>SIMPEG sering bermasalah; data tidak selalu mutakhir; belum ada dashboard analitik.</li></ul>
           <h4>Dampak</h4>
           <p>Keputusan (mutasi, promosi, pensiun) berisiko; perencanaan SDM tidak berbasis data real-time.</p>
         </div>
@@ -160,9 +147,7 @@
           <h3>4) Aplikasi rawan diretas & sering error saat trafik tinggi</h3>
           <span class="chip">Keamanan Aplikasi</span><span class="chip">Reliabilitas</span>
           <h4>Kondisi Saat Ini</h4>
-          <ul>
-            <li>Infrastruktur terbatas; keamanan (MFA/WAF) belum merata; saat input massal aplikasi sering down.</li>
-          </ul>
+          <ul><li>Infrastruktur terbatas; keamanan (MFA/WAF) belum merata; saat input massal aplikasi sering down.</li></ul>
           <h4>Dampak</h4>
           <p>Layanan terganggu; potensi kebocoran data ASN; turunnya kepercayaan.</p>
         </div>
@@ -307,93 +292,23 @@
     </div>
   </section>
 
-  <!-- Rencana 6 Minggu & KPI -->
-  <section id="rencana">
-    <h2>Rencana 6 Minggu & KPI</h2>
-    <div class="grid cols-2">
-      <div class="card">
-        <h3>Minggu 1–3 (Foundations → Go-Live Terkendali)</h3>
-        <ul>
-          <li><strong>Minggu 1 — Baseline & Hardening Dasar</strong>
-            <ul>
-              <li>Inventaris aset & metrik <em>baseline</em> (uptime, error 5xx, p95 latency).</li>
-              <li>Aktifkan <strong>MFA</strong> semua akun admin; rotasi password/SSH key.</li>
-              <li>Draft <strong>SOP v1</strong>: patching, backup, kontrol akses.</li>
-              <li>Siapkan VPS: <strong>Nginx reverse proxy + TLS</strong>, firewall/UFW minimal-port.</li>
-            </ul>
-          </li>
-          <li><strong>Minggu 2 — Migrasi & Keamanan Inti</strong>
-            <ul>
-              <li>Migrasi aplikasi prioritas ke VPS <em>staging</em> → uji fungsi.</li>
-              <li>Pasang <strong>WAF (ModSecurity + OWASP CRS)</strong>, <em>rate limit</em>, <strong>fail2ban</strong>.</li>
-              <li>Hardening DB (role minimum, TLS, <strong>backup harian</strong>).</li>
-            </ul>
-          </li>
-          <li><strong>Minggu 3 — Monitoring & Go-Live</strong>
-            <ul>
-              <li>Prometheus + Node/Nginx exporter, <strong>Grafana</strong>, Alertmanager.</li>
-              <li>Dashboard: uptime, error 5xx, p95 latency, CPU/RAM, disk I/O.</li>
-              <li>Alert (email/Telegram) untuk 5xx spike, CPU&gt;85%, disk&lt;20%.</li>
-              <li><strong>Go-live bertahap</strong> + rencana rollback.</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Minggu 4–6 (Tuning → Keamanan → Pelaporan)</h3>
-        <ul>
-          <li><strong>Minggu 4 — Tuning Kinerja & Validasi</strong>
-            <ul>
-              <li><em>Load/stress test</em> (k6/JMeter) skenario puncak; perbaiki bottleneck.</li>
-              <li>Optimasi DB (indexing), caching; validasi 30–50 <em>geofence</em> absensi prioritas.</li>
-              <li>Update SOP ke <strong>v2</strong> berdasar temuan.</li>
-            </ul>
-          </li>
-          <li><strong>Minggu 5 — Uji Keamanan & Drill Insiden</strong>
-            <ul>
-              <li>Scan keamanan (OWASP ZAP baseline); perbaiki temuan kritikal.</li>
-              <li><strong>Incident response drill</strong> + <em>post-mortem</em>.</li>
-              <li>Uji <strong>backup-restore</strong> (tabletop/nyata).</li>
-            </ul>
-          </li>
-          <li><strong>Minggu 6 — Stabilization & Pelaporan</strong>
-            <ul>
-              <li>Pemantauan 1 minggu penuh; grafik <em>before–after</em>.</li>
-              <li>Survei <strong>CSAT</strong> pengguna.</li>
-              <li>Finalisasi: <strong>SK/SOP</strong>, dashboard, laporan akhir & rencana tindak lanjut 3 bulan.</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>KPI (akhir Minggu ke-6)</h3>
-        <ul>
-          <li><strong>Uptime puncak ≥ 99,5%</strong> (periode sibuk).</li>
-          <li><strong>Error rate</strong> turun ≥ <strong>60–70%</strong> dari baseline (5xx + timeout ÷ total request).</li>
-          <li><strong>MFA admin 100%</strong> aktif.</li>
-          <li><strong>MTTR ≤ 30 menit</strong> (rata-rata waktu pemulihan).</li>
-          <li><strong>Akurasi geotag absensi ≥ 95%</strong> pada titik yang divalidasi.</li>
-          <li><strong>CSAT ≥ 85%</strong> (skala 1–5, ≥4 = puas).</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Bukti Aktualisasi (dikumpulkan per minggu)</h3>
-        <ul>
-          <li><strong>M1:</strong> daftar aset, metrik baseline, bukti MFA aktif.</li>
-          <li><strong>M2:</strong> konfigurasi WAF/Firewall, log backup, catatan migrasi.</li>
-          <li><strong>M3:</strong> screenshot dashboard Grafana & contoh notifikasi alert.</li>
-          <li><strong>M4:</strong> laporan <em>load test</em> (throughput/error/latency) + perubahan tuning.</li>
-          <li><strong>M5:</strong> hasil scan ZAP + perbaikan, berita acara drill insiden, uji restore.</li>
-          <li><strong>M6:</strong> grafik before–after, hasil CSAT, SK/SOP final, laporan akhir (PDF).</li>
-        </ul>
-      </div>
+  <!-- KESIMPULAN (menggantikan rencana 6 minggu) -->
+  <section id="kesimpulan">
+    <h2>Kesimpulan & Nilai Akhir</h2>
+    <div class="card">
+      <p><strong>BKPSDM</strong> telah mengidentifikasi <strong>6 isu kunci</strong> yang mempengaruhi terwujudnya SMART GOVERNANCE. Melalui tapisan berbobot, ditetapkan <strong>core issue</strong> yaitu <em>aplikasi rawan diretas & sering error saat trafik tinggi</em>. Analisis <em>fishbone</em> memperlihatkan sebab lintas <em>people–process–technology–policy–environment</em>.</p>
+      <h3 class="small">Pokok Rekomendasi</h3>
+      <ul>
+        <li><strong>Kebijakan & Tata Kelola</strong> — Tetapkan SK standar keamanan aplikasi ASN, SOP patching/backup/incident; pastikan akuntabilitas lintas tim.</li>
+        <li><strong>Teknologi Prioritas</strong> — Migrasi & hardening, aktifkan WAF + TLS + MFA, backup terjadwal, monitoring real-time.</li>
+        <li><strong>Proses & SDM</strong> — Bentuk tim mini incident response, lakukan uji beban berkala & audit keamanan periodik.</li>
+      </ul>
+      <p class="small"><strong>Indikator verifikasi (minimum):</strong> Uptime puncak ≥ 99,5%, penurunan error ≥ 60%, MFA admin 100%, akurasi geotag absensi ≥ 95%, insiden mayor 0.</p>
+      <p>Dokumen ini menjadi dasar pelaksanaan aktualisasi dan pengambilan keputusan manajerial untuk penguatan layanan kepegawaian berbasis digital yang aman dan andal.</p>
     </div>
   </section>
 
-  <p class="foot">© 04 September 2025 — Diisi untuk Badan Kepegawaian dan Pengembangan Sumber Daya Manusia oleh Taopik Hidayat.</p>
+  <p class="foot">© 04 September 2025 — Disusun untuk Tugas Analisis Isu dan Gagasan Kreatif Mewujudkan Samrt Governance oleh Taopik Hidayat.</p>
 </div>
 </body>
 </html>
