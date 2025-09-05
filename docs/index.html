@@ -280,37 +280,80 @@
 
   <!-- FISHBONE -->
   <section id="fishbone">
-    <h2>Analisis Akar Masalah (Fishbone)</h2>
-    <div class="grid cols-3">
-      <div class="card"><h3>People</h3><ul>
-        <li>Kompetensi pengelola terbatas (keamanan, optimasi).</li>
-        <li>Belum ada tim <em>incident response</em>.</li>
-        <li>Ketergantungan vendor/penyedia.</li></ul></div>
-      <div class="card"><h3>Process</h3><ul>
-        <li>SOP pemeliharaan & patching belum baku.</li>
-        <li>MFA/audit log belum konsisten.</li>
-        <li>Tidak ada <em>stress test</em> sebelum puncak trafik.</li></ul></div>
-      <div class="card"><h3>Technology</h3><ul>
-        <li>Infrastruktur terbatas (tanpa autoscaling).</li>
-        <li>Belum ada WAF/IDS/IPS, hardening minimal.</li>
-        <li>DB belum optimal (indexing, caching).</li></ul></div>
-      <div class="card"><h3>Policy</h3><ul>
-        <li>Standar keamanan aplikasi belum ditetapkan.</li>
-        <li>Keamanan & uptime belum jadi IKU.</li></ul></div>
-      <div class="card"><h3>Environment</h3><ul>
-        <li>Lonjakan pengguna massal (absensi/SKP).</li>
-        <li>Ancaman siber meningkat.</li>
-        <li>Digitalisasi layanan menambah beban.</li></ul></div>
+  <h2>Analisis Akar Masalah (Fishbone)</h2>
+
+  <div class="grid cols-3">
+    <div class="card">
+      <h3>Environment</h3>
+      <ul>
+        <li>Internet/ISP fluktuatif.</li>
+        <li>Kapasitas server kurang.</li>
+        <li>Lonjakan serentak.</li>
+        <li>Listrik tidak stabil.</li>
+      </ul>
     </div>
 
-    <!-- === Gambar Fishbone ===
-         Upload file ke: docs/images/fishbone_final.png -->
-    <div class="card" style="margin-top:12px">
-      <img src="images/fishbone_final.png" alt="Fishbone analisis akar masalah"
-           style="max-width:100%;height:auto;border:1px solid #1f2937;border-radius:10px">
-      <p class="small" style="margin-top:8px">Gambar 1. Fishbone — akar masalah core issue.</p>
+    <div class="card">
+      <h3>Monitoring</h3>
+      <ul>
+        <li>Uptime tidak terukur.</li>
+        <li>Log tidak terstruktur.</li>
+        <li>Threshold alert keliru.</li>
+        <li>Tak ada dashboard real-time.</li>
+      </ul>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>Konfigurasi</h3>
+      <ul>
+        <li>Query tanpa index.</li>
+        <li>DB tidak optimal.</li>
+        <li>Asset besar.</li>
+        <li>Library rentan.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Infrastruktur</h3>
+      <ul>
+        <li>Firewall L3/L4 saja (WAF L7 belum).</li>
+        <li>DB tunggal.</li>
+        <li>Single server.</li>
+        <li>CPU/RAM kurang, I/O bottleneck.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Proses</h3>
+      <ul>
+        <li>Tanpa load/stress test.</li>
+        <li>SOP incident belum baku.</li>
+        <li>Change tanpa review/rollback.</li>
+        <li>Backup tidak terjadwal.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Manpower</h3>
+      <ul>
+        <li>Skill security terbatas.</li>
+        <li>Ketergantungan vendor.</li>
+        <li>Higiene kredensial lemah.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Gambar fishbone versi lengkap -->
+  <div class="card" style="margin-top:12px">
+    <img src="images/fishbone_final.png"
+         alt="Fishbone analisis akar masalah"
+         style="max-width:100%;height:auto;border:1px solid #1f2937;border-radius:10px">
+    <p class="small" style="margin-top:8px">
+      <strong>Efek:</strong> Down/Eror • Layanan lambat • Risiko kebocoran data.
+    </p>
+  </div>
+</section>
+
 
   <!-- SOLUSI -->
   <section id="solusi">
