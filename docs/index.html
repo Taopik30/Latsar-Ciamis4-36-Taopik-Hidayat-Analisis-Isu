@@ -85,6 +85,7 @@
       <a href="#tapisan">Tapisan & Core Issue</a>
       <a href="#fishbone">Fishbone</a>
       <a href="#solusi">Gagasan Solusi</a>
+      <a href="#catatan-core-issue">Catatan Core Issue</a>
       <a href="#kesimpulan">Kesimpulan</a>
     </nav>
   </header>
@@ -100,7 +101,7 @@
       <div class="card">
         <h3>Hasil Utama</h3>
         <ul>
-          <li>6 isu kritikal bidang Pengadaan, Pemberhentian & Informasi Kepegawaian.</li>
+          <li>6 isu kritikal di BKPSDM Ciamis Bidang Pengadaan, Pemberhentian & Informasi Kepegawaian.</li>
           <li>Core Issue ditetapkan via <em>weighted filtering</em>.</li>
           <li>Analisis akar masalah (Fishbone) dan solusi kreatif yang siap diimplementasikan.</li>
         </ul>
@@ -336,7 +337,31 @@
         <li>Kolaborasi & benchmarking regional.</li></ul></div>
     </div>
   </section>
-
+  
+<section id="catatan-core-issue">
+  <h2>Catatan Penetapan Core Issue</h2>
+  <div class="card">
+    <p>
+      <strong>Core issue</strong> dipilih melalui <strong>AKPL</strong>, <strong>USG</strong>, dan
+      <em>tapisan berbobot</em> (Dampak 40%, Urgensi 30%, Risiko 15%, Kemudahan 15%).
+      Isu <em>“Aplikasi rawan diretas &amp; sering error saat trafik tinggi”</em> memperoleh skor
+      tertinggi karena berdampak lintas layanan, berisiko tinggi, sekaligus berada dalam kewenangan
+      unit untuk diperbaiki. Analisis <em>fishbone</em> menunjukkan akar masalah tersebar pada
+      <strong>infrastruktur</strong> (WAF belum aktif, DB &amp; server tunggal),
+      <strong>proses</strong> (tanpa load test, SOP incident belum baku),
+      <strong>konfigurasi</strong> (query/index), <strong>monitoring</strong> (uptime &amp; log belum terukur),
+      <strong>SDM</strong> (keterampilan keamanan), dan <strong>faktor lingkungan</strong> (lonjakan serentak/ISP).
+    </p>
+    <p>
+      <strong>Solusi kreatif</strong> yang diajukan mencakup <em>migrasi &amp; hardening</em>, aktivasi
+      <strong>WAF–TLS–MFA</strong>, optimasi DB &amp; caching, <em>monitoring</em> real-time,
+      <em>SOP incident &amp; change</em>, pembentukan <em>tim incident response</em>, serta penetapan
+      <strong>IKU keamanan &amp; uptime</strong>. Keberhasilan diverifikasi dengan
+      <strong>uptime ≥ 99,5%</strong>, <strong>insiden mayor 0</strong>, dan
+      <strong>penurunan error ≥ 60%</strong> pada periode puncak.
+    </p>
+  </div>
+</section>
   <!-- KESIMPULAN -->
   <section id="kesimpulan">
     <h2>Kesimpulan & Nilai Akhir</h2>
