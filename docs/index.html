@@ -259,24 +259,69 @@
   </section>
 
   <!-- TAPISAN -->
-  <section id="tapisan">
-    <h2>Tapisan Berbobot & Penetapan Core Issue</h2>
-    <p>Kriteria: <strong>Dampak</strong> 40%, <strong>Urgensi</strong> 30%, <strong>Risiko</strong> 15%, <strong>Kemudahan</strong> 15%.</p>
-    <table class="score-table">
-      <thead>
-        <tr><th>Isu</th><th>Dampak</th><th>Urgensi</th><th>Risiko</th><th>Kemudahan</th><th>Total</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1) SDM belum memenuhi kebutuhan</td><td>25</td><td>20</td><td>10</td><td>5</td><td>60</td></tr>
-        <tr><td>2) Kuota formasi belum terpenuhi</td><td>20</td><td>15</td><td>10</td><td>5</td><td>50</td></tr>
-        <tr><td>3) Sistem informasi belum optimal</td><td>30</td><td>25</td><td>12</td><td>8</td><td>75</td></tr>
-        <tr class="is-core"><td>4) Aplikasi rawan diretas &amp; error</td><td>35</td><td>28</td><td>14</td><td>10</td><td><strong>87</strong></td></tr>
-        <tr><td>5) Koordinat absensi tidak akurat</td><td>28</td><td>20</td><td>12</td><td>8</td><td>68</td></tr>
-        <tr><td>6) Monitoring aplikasi belum terpadu</td><td>32</td><td>25</td><td>13</td><td>12</td><td>82</td></tr>
-      </tbody>
-    </table>
-    <div class="core-banner"><strong>Core Issue:</strong> <em>Aplikasi rawan diretas &amp; sering error saat trafik tinggi.</em></div>
-  </section>
+<section id="tapisan">
+  <h2>Tapisan Berbobot & Penetapan Core Issue</h2>
+  <p>
+    Kriteria & bobot: <strong>Dampak 40%</strong>, <strong>Urgensi 30%</strong>,
+    <strong>Risiko 15%</strong>, <strong>Kemudahan 15%</strong>.
+    <span class="small">Skor Berbobot = (Dampak×0.40) + (Urgensi×0.30) + (Risiko×0.15) + (Kemudahan×0.15).</span>
+  </p>
+
+  <table class="score-table">
+    <thead>
+      <tr>
+        <th>Isu</th>
+        <th>Dampak<br/><span class="small">(40%)</span></th>
+        <th>Urgensi<br/><span class="small">(30%)</span></th>
+        <th>Risiko<br/><span class="small">(15%)</span></th>
+        <th>Kemudahan<br/><span class="small">(15%)</span></th>
+        <th>Total (raw)</th>
+        <th>Skor Berbobot</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1) SDM belum memenuhi kebutuhan</td>
+        <td>25</td><td>20</td><td>10</td><td>5</td>
+        <td>60</td><td>18.25</td>
+      </tr>
+      <tr>
+        <td>2) Kuota formasi belum terpenuhi</td>
+        <td>20</td><td>15</td><td>10</td><td>5</td>
+        <td>50</td><td>14.75</td>
+      </tr>
+      <tr>
+        <td>3) Sistem informasi belum optimal</td>
+        <td>30</td><td>25</td><td>12</td><td>8</td>
+        <td>75</td><td>22.50</td>
+      </tr>
+      <tr class="is-core">
+        <td>4) Aplikasi rawan diretas &amp; error</td>
+        <td>35</td><td>28</td><td>14</td><td>10</td>
+        <td><strong>87</strong></td><td><strong>26.00</strong></td>
+      </tr>
+      <tr>
+        <td>5) Koordinat absensi tidak akurat</td>
+        <td>28</td><td>20</td><td>12</td><td>8</td>
+        <td>68</td><td>20.20</td>
+      </tr>
+      <tr>
+        <td>6) Monitoring aplikasi belum terpadu</td>
+        <td>32</td><td>25</td><td>13</td><td>12</td>
+        <td>82</td><td>24.05</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="core-banner">
+    <strong>Core Issue:</strong> <em>Aplikasi rawan diretas &amp; sering error saat trafik tinggi.</em>
+    <div class="small" style="margin-top:6px">
+      Catatan: penetapan menggunakan <strong>Skor Berbobot</strong> (kolom terakhir);
+      kolom <em>Total (raw)</em> hanya penjumlahan sederhana untuk referensi.
+    </div>
+  </div>
+</section>
+
 
   <!-- FISHBONE -->
   <section id="fishbone">
